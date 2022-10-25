@@ -13,6 +13,11 @@
 		B03F780E28882F0300390345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F780C28882F0300390345 /* Main.storyboard */; };
 		B03F781028882F0500390345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03F780F28882F0500390345 /* Assets.xcassets */; };
 		B03F781328882F0500390345 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F781128882F0500390345 /* LaunchScreen.storyboard */; };
+		B03F781C2888365F00390345 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B03F781B2888365F00390345 /* RxCocoa */; };
+		B03F781E2888365F00390345 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B03F781D2888365F00390345 /* RxRelay */; };
+		B03F78202888365F00390345 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B03F781F2888365F00390345 /* RxSwift */; };
+		B03F782228883C7300390345 /* NumerFormatter+separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F782128883C7300390345 /* NumerFormatter+separator.swift */; };
+		B03F782528883F0E00390345 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F782428883F0E00390345 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		B03F780F28882F0500390345 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B03F781228882F0500390345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B03F781428882F0500390345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03F782128883C7300390345 /* NumerFormatter+separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumerFormatter+separator.swift"; sourceTree = "<group>"; };
+		B03F782428883F0E00390345 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B03F782628897EE500390345 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03F78202888365F00390345 /* RxSwift in Frameworks */,
+				B03F781E2888365F00390345 /* RxRelay in Frameworks */,
+				B03F781C2888365F00390345 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,7 @@
 		B03F77FA28882F0300390345 = {
 			isa = PBXGroup;
 			children = (
+				B03F782628897EE500390345 /* MyPlayground.playground */,
 				B03F780528882F0300390345 /* MortgageCalculator */,
 				B03F780428882F0300390345 /* Products */,
 			);
@@ -56,15 +68,25 @@
 		B03F780528882F0300390345 /* MortgageCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				B03F782328883C8600390345 /* Helpers */,
 				B03F780628882F0300390345 /* AppDelegate.swift */,
 				B03F780828882F0300390345 /* SceneDelegate.swift */,
 				B03F780A28882F0300390345 /* ViewController.swift */,
+				B03F782428883F0E00390345 /* ViewModel.swift */,
 				B03F780C28882F0300390345 /* Main.storyboard */,
 				B03F780F28882F0500390345 /* Assets.xcassets */,
 				B03F781128882F0500390345 /* LaunchScreen.storyboard */,
 				B03F781428882F0500390345 /* Info.plist */,
 			);
 			path = MortgageCalculator;
+			sourceTree = "<group>";
+		};
+		B03F782328883C8600390345 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B03F782128883C7300390345 /* NumerFormatter+separator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +105,11 @@
 			dependencies = (
 			);
 			name = MortgageCalculator;
+			packageProductDependencies = (
+				B03F781B2888365F00390345 /* RxCocoa */,
+				B03F781D2888365F00390345 /* RxRelay */,
+				B03F781F2888365F00390345 /* RxSwift */,
+			);
 			productName = MortgageCalculator;
 			productReference = B03F780328882F0300390345 /* MortgageCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,9 @@
 				Base,
 			);
 			mainGroup = B03F77FA28882F0300390345;
+			packageReferences = (
+				B03F781A2888365F00390345 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = B03F780428882F0300390345 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03F782528883F0E00390345 /* ViewModel.swift in Sources */,
+				B03F782228883C7300390345 /* NumerFormatter+separator.swift in Sources */,
 				B03F780B28882F0300390345 /* ViewController.swift in Sources */,
 				B03F780728882F0300390345 /* AppDelegate.swift in Sources */,
 				B03F780928882F0300390345 /* SceneDelegate.swift in Sources */,
@@ -293,8 +325,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +355,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +394,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B03F781A2888365F00390345 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B03F781B2888365F00390345 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B03F781A2888365F00390345 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B03F781D2888365F00390345 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B03F781A2888365F00390345 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		B03F781F2888365F00390345 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B03F781A2888365F00390345 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B03F77FB28882F0300390345 /* Project object */;
 }
